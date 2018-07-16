@@ -22,7 +22,9 @@ process.source = cms.Source("PoolSource",
 
 process.DQMData = cms.EDAnalyzer('PixelTelescope', 
  	tracks = cms.untracked.InputTag('ctfWithMaterialTracks'),
-	PixelClustersLabel = cms.InputTag("siPixelClusters")
+	PixelDigisLabel = cms.InputTag("siPixelDigis"),
+	PixelClustersLabel = cms.InputTag("siPixelClusters"),
+	PixelHitsLabel = cms.InputTag("siPixelRecHits"),
 )
 
 
